@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title">Ресторан Hayat - Грузинская кухня</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="#home" class="logo">
+          <img src="/logo.png" alt="Hayat" class="logo-image" />
+          <span class="logo-text">Hayat</span>
+        </a>
+
+        <nav class="nav" id="nav">
+          <li>
+            <a href="#home" class="nav-link" data-i18n="nav.home">Главная</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-i18n="nav.about">О нас</a>
+          </li>
+          <li>
+            <a href="#menu" class="nav-link" data-i18n="nav.menu">Меню</a>
+          </li>
+          <li><a href="#bar" class="nav-link" data-i18n="nav.bar">Бар</a></li>
+          <li>
+            <a href="#reservation" class="nav-link" data-i18n="nav.reservation"
+              >Бронирование</a
+            >
+          </li>
+          <li>
+            <a href="#reviews" class="nav-link" data-i18n="nav.reviews"
+              >Отзывы</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-i18n="nav.contact"
+              >Контакты</a
+            >
+          </li>
+        </nav>
+
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="bg">BG</button>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 data-i18n="hero.title">Добро пожаловать в Hayat</h1>
+        <p data-i18n="hero.subtitle">
+          Аутентичная грузинская кухня в сердце города
+        </p>
+        <a href="#reservation" class="cta-button" data-i18n="hero.cta"
+          >Забронировать столик</a
+        >
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section-title" data-i18n="about.title">О ресторане</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p data-i18n="about.description">
+              История ресторана «Хаят» Ресторан «Хаят» появился в Варне в 2023
+              году — из желания создать место, где каждый сможет почувствовать
+              вкус настоящего Кавказа и тепло домашнего угощения. Мы выросли
+              среди ароматов свежего лаваша, дымных шашлыков и застолий, где за
+              одним столом собирались родные и друзья. И однажды решили передать
+              эту атмосферу здесь, в сердце Варны — в ресторане, где всё просто,
+              честно и по-домашнему.
+            </p>
+            <p data-i18n="about.description2">
+              Кухня «Хаят» объединяет армянские и грузинские традиции. Мы
+              готовим с душой — так, как готовят для своих: без спешки, с
+              уважением к рецептам и с любовью к гостям. Каждое блюдо здесь —
+              история. Вкус детства, семейных праздников и вечеров, когда еда
+              объединяет людей. «Хаят» — это не просто ресторан. Это место, куда
+              заходят не случайно. Здесь пахнет тёплым хлебом и специями, звучит
+              смех, а за каждым столом чувствуется уют и душа Кавказа. Добро
+              пожаловать домой — в «Хаят».
+            </p>
+          </div>
+          <div class="about-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+              alt="Ресторан Hayat"
+              class="about-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU SECTION ===== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <h2 class="section-title" data-i18n="menu.title">Наше меню</h2>
+
+        <div class="menu-tabs">
+          <button
+            class="menu-tab active"
+            data-category="appetizers"
+            data-i18n="menu.appetizers"
+          >
+            Закуски
+          </button>
+          <button
+            class="menu-tab"
+            data-category="salads"
+            data-i18n="menu.salads"
+          >
+            Салаты
+          </button>
+          <button
+            class="menu-tab"
+            data-category="khachapuri"
+            data-i18n="menu.khachapuri"
+          >
+            Хачапури
+          </button>
+          <button
+            class="menu-tab"
+            data-category="khinkali"
+            data-i18n="menu.khinkali"
+          >
+            Хинкали
+          </button>
+          <button class="menu-tab" data-category="main" data-i18n="menu.main">
+            Основные блюда
+          </button>
+          <button class="menu-tab" data-category="grill" data-i18n="menu.grill">
+            Гриль
+          </button>
+          <button class="menu-tab" data-category="soups" data-i18n="menu.soups">
+            Супы
+          </button>
+          <button
+            class="menu-tab"
+            data-category="garnishes"
+            data-i18n="menu.garnishes"
+          >
+            Гарниры
+          </button>
+          <button
+            class="menu-tab"
+            data-category="sauces"
+            data-i18n="menu.sauces"
+          >
+            Соусы
+          </button>
+          <button
+            class="menu-tab"
+            data-category="breads"
+            data-i18n="menu.breads"
+          >
+            Хлебы
+          </button>
+        </div>
+
+        <!-- закуски -->
+        <div class="menu-content active" id="appetizers">
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img src="/закуски/1.jpeg" alt="Пхали" class="menu-item-image" />
+              <div class="menu-item-content">
+                <h3>Армянсие сиры с зеленью</h3>
+                <div class="menu-item-price">15лв</div>
+                <div class="menu-item-description">
+                  Традиционная закуска из бринзы, сулугуни и шпината
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="/закуски/2.jpg"
+                alt="Чахохбили"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3>Седёдка под водку</h3>
+                <div class="menu-item-price">25₽</div>
+                <div class="menu-item-description">
+                  Селёдка, варенный картофель, лук маренованный
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="/закуски/3.png"
+                alt="Бадриджани"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3>Пхали батладжани</h3>
+                <div class="menu-item-price">20₽</div>
+                <div class="menu-item-description">
+                  Баклажаны с ореховой пастой и гранатом
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="/закуски/4.jpg" alt="Пхали" class="menu-item-image" />
+              <div class="menu-item-content">
+                <h3>Баклажаны с помидорами</h3>
+                <div class="menu-item-price">15₽</div>
+                <div class="menu-item-description">
+                  Баклажаны с чесночным соусом и свежими помидорами
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="/закуски/5.jpg" alt="Пхали" class="menu-item-image" />
+              <div class="menu-item-content">
+                <h3>Овощная нарезка</h3>
+                <div class="menu-item-price">15лв</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.appetizers.items.pkhali.description"
+                >
+                  Овощная нарезка, в состав входит:"огурцы, перец, редиска,
+                  зелень"
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="/закуски/6.jpeg" alt="Суджук" class="menu-item-image" />
+              <div class="menu-item-content">
+                <h3>Суджук</h3>
+                <div class="menu-item-price">15₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.appetizers.items.pkhali.description"
+                >
+                  Традиционная закуска из шпината с грецкими орехами и специями
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Салаты -->
+        <div class="menu-content" id="salads">
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-content" id="khachapuri">
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-content" id="khinkali">
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                alt="Салат"
+                class="menu-item-image"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Грузинский салат
+                </h3>
+                <div class="menu-item-price">18₽</div>
+                <div
+                  class="menu-item-description"
+                  data-i18n="menu.salads.items.georgian.description"
+                >
+                  Свежие овощи с грузинскими специями
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== RESERVATION SECTION ===== -->
+    <section class="section reservation" id="reservation">
+      <div class="container">
+        <h2 class="section-title" data-i18n="reservation.title">
+          Бронирование столика
+        </h2>
+
+        <form class="reservation-form" id="reservationForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" data-i18n="reservation.name">Имя</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" data-i18n="reservation.phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date" data-i18n="reservation.date">Дата</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="time" data-i18n="reservation.time">Время</label>
+              <input type="time" id="time" name="time" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guests" data-i18n="reservation.guests"
+                >Количество гостей</label
+              >
+              <select id="guests" name="guests" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="occasion" data-i18n="reservation.occasion"
+                >Повод</label
+              >
+              <select id="occasion" name="occasion">
+                <option value="" data-i18n="reservation.occasion_default">
+                  Выберите повод
+                </option>
+                <option value="birthday" data-i18n="reservation.birthday">
+                  День рождения
+                </option>
+                <option value="anniversary" data-i18n="reservation.anniversary">
+                  Годовщина
+                </option>
+                <option value="business" data-i18n="reservation.business">
+                  Деловая встреча
+                </option>
+                <option value="date" data-i18n="reservation.date_night">
+                  Свидание
+                </option>
+                <option value="family" data-i18n="reservation.family">
+                  Семейный ужин
+                </option>
+                <option value="friends" data-i18n="reservation.friends">
+                  Встреча с друзьями
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="notes" data-i18n="reservation.notes"
+              >Особые пожелания</label
+            >
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="Расскажите о ваших особых пожеланиях..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="submit-btn"
+            data-i18n="reservation.submit"
+          >
+            Забронировать
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS SECTION ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-title" data-i18n="reviews.title">
+          Отзывы наших гостей
+        </h2>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                alt="Александр"
+                class="review-avatar"
+              />
+              <div class="review-info">
+                <h4 data-i18n="reviews.reviews1.name">Александр Петров</h4>
+                <div class="review-date" data-i18n="reviews.reviews1.date">
+                  15 ноября 2024
+                </div>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text" data-i18n="reviews.reviews1.text">
+              Потрясающий ресторан! Атмосфера настоящей Грузии, блюда просто
+              восхитительные. Особенно понравились хинкали и шашлык. Обязательно
+              вернемся снова!
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                alt="Мария"
+                class="review-avatar"
+              />
+              <div class="review-info">
+                <h4 data-i18n="reviews.reviews2.name">Мария Иванова</h4>
+                <div class="review-date" data-i18n="reviews.reviews2.date">
+                  10 ноября 2024
+                </div>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text" data-i18n="reviews.reviews2.text">
+              Идеальное место для семейных ужинов. Дети тоже остались в восторге
+              от блюд. Отличное обслуживание, красивый интерьер. Рекомендую!
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                alt="Дмитрий"
+                class="review-avatar"
+              />
+              <div class="review-info">
+                <h4 data-i18n="reviews.reviews3.name">Дмитрий Смирнов</h4>
+                <div class="review-date" data-i18n="reviews.reviews3.date">
+                  5 ноября 2024
+                </div>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text" data-i18n="reviews.reviews3.text">
+              Отличная грузинская кухня! Хачапури просто обалденные, вино тоже
+              на высоте. Единственное - иногда нужно ждать заказ дольше, чем
+              хотелось бы.
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                alt="Елена"
+                class="review-avatar"
+              />
+              <div class="review-info">
+                <h4 data-i18n="reviews.reviews4.name">Елена Козлова</h4>
+                <div class="review-date" data-i18n="reviews.reviews4.date">
+                  1 ноября 2024
+                </div>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text" data-i18n="reviews.reviews4.text">
+              Праздновали здесь день рождения - было просто великолепно!
+              Персонал очень attentive, помогли с выбором блюд. Все гости
+              остались довольны.
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                alt="Антон"
+                class="review-avatar"
+              />
+              <div class="review-info">
+                <h4 data-i18n="reviews.reviews5.name">Антон Волков</h4>
+                <div class="review-date" data-i18n="reviews.reviews5.date">
+                  28 октября 2024
+                </div>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text" data-i18n="reviews.reviews5.text">
+              Аутентичная грузинская атмосфера! Музыка живая, блюда вкусные,
+              порции щедрые. Чача - отдельная история! Настоящее погружение в
+              Грузию.
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                alt="Ольга"
+                class="review-avatar"
+              />
+              <div class="review-info">
+                <h4 data-i18n="reviews.reviews6.name">Ольга Новикова</h4>
+                <div class="review-date" data-i18n="reviews.reviews6.date">
+                  25 октября 2024
+                </div>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="review-text" data-i18n="reviews.reviews6.text">
+              Очень хорошее место для романтического ужина. Красивая атмосфера,
+              вкусная еда. Немного шумно по выходным, но это добавляет жизни
+              ресторану.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contact.title">Контакты</h2>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4 data-i18n="contact.address_title">Адрес</h4>
+                <p data-i18n="contact.address">ул. Тверская, 15, Москва</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4 data-i18n="contact.phone_title">Телефон</h4>
+                <p data-i18n="contact.phone">+7 (495) 123-45-67</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4 data-i18n="contact.email_title">Email</h4>
+                <p data-i18n="contact.email">info@hayat-restaurant.ru</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h4 data-i18n="contact.hours_title">Часы работы</h4>
+                <p data-i18n="contact.hours">Пн-Вс: 12:00 - 23:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.339!2d37.6175!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQ1JzMwLjkiTiAzN8KwMzcnMDMuMCJF!5e0!3m2!1sen!2s!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border: 0; border-radius: 15px"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 data-i18n="footer.about">О Hayat</h3>
+            <p data-i18n="footer.about_text">
+              Ресторан аутентичной грузинской кухни, где традиции встречаются с
+              современностью.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3 data-i18n="footer.quick_links">Быстрые ссылки</h3>
+            <p>
+              <a href="#about" data-i18n="footer.about_link">О нас</a><br />
+              <a href="#menu" data-i18n="footer.menu_link">Меню</a><br />
+              <a href="#reservation" data-i18n="footer.reservation_link"
+                >Бронирование</a
+              >
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3 data-i18n="footer.follow">Следите за нами</h3>
+            <p data-i18n="footer.follow_text">
+              Подпишитесь на наши социальные сети для акций и новостей.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-i18n="footer.copyright">
+            &copy; 2024 Hayat Restaurant. Все права защищены.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
