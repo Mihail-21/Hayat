@@ -350,7 +350,6 @@ body {
   border-radius: 0;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  filter: grayscale(100%);
 }
 
 .about-image:hover {
@@ -470,6 +469,15 @@ body {
   font-weight: 300;
 }
 
+.gram {
+  padding-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.salats {
+  height: 300px;
+}
 /* ===== BAR MENU SECTION - BLACK & WHITE ===== */
 .bar-menu {
   background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
