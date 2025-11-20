@@ -444,6 +444,11 @@ body {
   transition: filter 0.3s ease;
 }
 
+.menu-item-image-1 {
+  height: 280px;
+  width: 365px;
+}
+
 .menu-item-content {
   padding: 1.5rem;
 }
@@ -475,6 +480,9 @@ body {
   font-weight: 400;
 }
 
+.gram-1 {
+  padding-top: 30px;
+}
 .salats {
   height: 300px;
 }

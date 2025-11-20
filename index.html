@@ -108,7 +108,14 @@
             data-category="appetizers"
             data-i18n="menu.appetizers"
           >
-            Закуски
+            Холодные закуски
+          </button>
+          <button
+            class="menu-tab active"
+            data-category="hot-appetizers"
+            data-i18n="menu.hot-appetizers"
+          >
+            Гарячие закуски
           </button>
           <button
             class="menu-tab"
@@ -163,7 +170,7 @@
           </button>
         </div>
 
-        <!-- закуски -->
+        <!-- Закуски -->
         <div class="menu-content active" id="appetizers">
           <div class="menu-grid">
             <div class="menu-item">
@@ -243,7 +250,11 @@
               </div>
             </div>
             <div class="menu-item">
-              <img src="/закуски/6.jpeg" alt="Суджук" class="menu-item-image" />
+              <img
+                src="./закуски/6.jpeg"
+                alt="Суджук"
+                class="menu-item-image"
+              />
               <div class="menu-item-content">
                 <h3>Суджук</h3>
                 <div class="menu-item-price">7.99лв/4.10eur</div>
@@ -255,12 +266,47 @@
             </div>
           </div>
         </div>
+        <!--Холодные закуски-->
+        <div class="menu-content" id="hot-appetizers">
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="./Хингали/1.png"
+                alt="Салат"
+                height="280"
+                width="100%"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Хингали с брынзой
+                </h3>
+                <div class="menu-item-price">6лв/3.07eur</div>
+                <div class="menu-item-description, gram">1 бр.</div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="./Хингали/2.png"
+                alt="Салат"
+                height="280"
+                width="100%"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Хингали с телятиной
+                </h3>
+                <div class="menu-item-price">4.60лв/2.35eur</div>
 
+                <div class="menu-item-description, gram">1 бр.</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Салаты -->
         <div class="menu-content" id="salads">
           <div class="menu-grid">
             <div class="menu-item">
-              <img src="/салаты/1.png" alt="Салат" class="menu-item-image" />
+              <img src="./салаты/1.png" alt="Салат" class="menu-item-image" />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">Хоровац</h3>
                 <div class="menu-item-price">14.99лв/7.66eur</div>
@@ -272,7 +318,7 @@
               </div>
             </div>
             <div class="menu-item">
-              <img src="/салаты/2.png" alt="Салат" class="menu-item-image" />
+              <img src="./салаты/2.png" alt="Салат" class="menu-item-image" />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
                   Шопский салат
@@ -286,7 +332,7 @@
               </div>
             </div>
             <div class="menu-item">
-              <img src="/салаты/9.jpeg" alt="Салат" class="menu-item-image" />
+              <img src="./салаты/9.jpeg" alt="Салат" class="menu-item-image" />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
                   Салат "Green"
@@ -300,7 +346,7 @@
             </div>
             <div class="menu-item">
               <img
-                src="/салаты/4.png"
+                src="./салаты/4.png"
                 alt="Салат"
                 class="menu-item-image salats"
               />
@@ -318,7 +364,7 @@
             </div>
             <div class="menu-item">
               <img
-                src="/салаты/3.png"
+                src="./салаты/3.png"
                 alt="Салат"
                 class="menu-item-image salats"
               />
@@ -333,7 +379,7 @@
             </div>
             <div class="menu-item">
               <img
-                src="/салаты/7.png"
+                src="./салаты/7.png"
                 alt="Салат"
                 class="menu-item-image salats"
               />
@@ -348,7 +394,7 @@
             </div>
             <div class="menu-item">
               <img
-                src="/салаты/7.png"
+                src="./салаты/7.png"
                 alt="Салат"
                 class="menu-item-image salats"
               />
@@ -363,7 +409,7 @@
             </div>
             <div class="menu-item">
               <img
-                src="/салаты/6.png"
+                src="./салаты/6.png"
                 alt="Салат"
                 class="menu-item-image salats"
               />
@@ -380,7 +426,7 @@
             </div>
             <div class="menu-item">
               <img
-                src="/салаты/8.png"
+                src="./салаты/8.png"
                 alt="Салат"
                 class="menu-item-image salats"
               />
@@ -398,159 +444,216 @@
             </div>
           </div>
         </div>
+        <!--Хачапури-->
         <div class="menu-content" id="khachapuri">
           <div class="menu-grid">
             <div class="menu-item">
-              <img src="" alt="Салат" class="menu-item-image" />
+              <img src="./хачапури/1.png" alt="Салат" class="menu-item-image" />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
+                  Хачапури по-имеретински
                 </h3>
-                <div class="menu-item-price">18₽</div>
+                <div class="menu-item-price">24.99лв/12.80eur</div>
                 <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
+                  Закрытое хачапури с двумя видами сыра
                 </div>
-                <div class="menu-item-description, gram">250гр</div>
+                <div class="menu-item-description, gram">600гр</div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="./хачапури/2.png" alt="Салат" class="menu-item-image" />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Хачапури по-аджарски
+                </h3>
+                <div class="menu-item-price">22лв/11.25eur</div>
+                <div class="menu-item-description">
+                  Закрытое хачапури с двумя видами сыра в форме лодки
+                </div>
+                <div class="menu-item-description, gram">450гр</div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="./хачапури/3.png" alt="Салат" class="menu-item-image" />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Хачапури по-еревански
+                </h3>
+                <div class="menu-item-price">25лв/12.78eur</div>
+                <div class="menu-item-description">
+                  Хачапури с мясом, украшенное свежими овощами
+                </div>
+                <div class="menu-item-description, gram">450гр</div>
+              </div>
+            </div>
+            <div class="menu-item menu-item-1">
+              <img src="./хачапури/4.png" alt="Салат" class="menu-item-image" />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Хачапури"Намак"
+                </h3>
+                <div class="menu-item-price">22.99лв/11.75eur</div>
+                <div class="menu-item-description">
+                  Авторское прочтение классики Кавказа. Нежное куринное мясо и
+                  сочная телятина в тонком тесте с тянущимся сыром, создают
+                  насыщенный вкус, в котором гармония лёгкости и силы. "Намак" -
+                  это новое сочетание традиций и современности, рожденное для
+                  тех, кто ищет особенный вкус.
+                </div>
+                <div class="menu-item-description, gram, gram-1">450гр</div>
               </div>
             </div>
             <div class="menu-item">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                src="./хачапури/5.png"
                 alt="Салат"
-                class="menu-item-image"
+                class="menu-item-image salats"
               />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
+                  Хачапури лобиани с лобио
                 </h3>
-                <div class="menu-item-price">18₽</div>
+                <div class="menu-item-price">18.99лв/9.70eur</div>
                 <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
+                  Пышный хачапури с традиционной фасолевой начинкой
                 </div>
-                <div class="menu-item-description, gram">250гр</div>
+                <div class="menu-item-description, gram">700гр</div>
               </div>
             </div>
             <div class="menu-item">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                src="./хачапури/6.png"
                 alt="Салат"
-                class="menu-item-image"
+                class="menu-item-image salats"
               />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
+                  Хачапури по-мегрельски
                 </h3>
-                <div class="menu-item-price">18₽</div>
+                <div class="menu-item-price">24.99лв/12.80eur</div>
                 <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
+                  Сытный хачапури с двойным сыром - внутри и сверху
                 </div>
-                <div class="menu-item-description, gram">250гр</div>
+                <div class="menu-item-description, gram">600гр</div>
               </div>
             </div>
             <div class="menu-item">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                src="./хачапури/7.png"
                 alt="Салат"
-                class="menu-item-image"
+                class="menu-item-image salats"
               />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
+                  Хачапури на мангале
                 </h3>
-                <div class="menu-item-price">18₽</div>
+                <div class="menu-item-price">13.99лв/7.15eur</div>
                 <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
+                  Ароматный хачапури, приготовленный на углях с лёгким дымком
                 </div>
-                <div class="menu-item-description, gram">250гр</div>
-              </div>
-            </div>
-            <div class="menu-item">
-              <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
-                alt="Салат"
-                class="menu-item-image"
-              />
-              <div class="menu-item-content">
-                <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
-                </h3>
-                <div class="menu-item-price">18₽</div>
-                <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
-                </div>
-                <div class="menu-item-description, gram">250гр</div>
-              </div>
-            </div>
-            <div class="menu-item">
-              <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
-                alt="Салат"
-                class="menu-item-image"
-              />
-              <div class="menu-item-content">
-                <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
-                </h3>
-                <div class="menu-item-price">18₽</div>
-                <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
-                </div>
-                <div class="menu-item-description, gram">250гр</div>
+                <div class="menu-item-description, gram">600гр</div>
               </div>
             </div>
           </div>
         </div>
+        <!--Хингали-->
         <div class="menu-content" id="khinkali">
           <div class="menu-grid">
             <div class="menu-item">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                src="./Хингали/1.png"
                 alt="Салат"
-                class="menu-item-image"
+                height="280"
+                width="100%"
               />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
+                  Хингали с брынзой
                 </h3>
-                <div class="menu-item-price">18₽</div>
-                <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
-                </div>
-                <div class="menu-item-description, gram">250гр</div>
+                <div class="menu-item-price">6лв/3.07eur</div>
+                <div class="menu-item-description, gram">1 бр.</div>
               </div>
             </div>
             <div class="menu-item">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                src="./Хингали/2.png"
                 alt="Салат"
-                class="menu-item-image"
+                height="280"
+                width="100%"
               />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
+                  Хингали с телятиной
                 </h3>
-                <div class="menu-item-price">18₽</div>
-                <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
-                </div>
-                <div class="menu-item-description, gram">250гр</div>
+                <div class="menu-item-price">4.60лв/2.35eur</div>
+
+                <div class="menu-item-description, gram">1 бр.</div>
               </div>
             </div>
             <div class="menu-item">
               <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
+                src="./Хингали/3.png"
                 alt="Салат"
-                class="menu-item-image"
+                height="280"
+                width="100%"
               />
               <div class="menu-item-content">
                 <h3 data-i18n="menu.salads.items.georgian.name">
-                  Грузинский салат
+                  Мама хингали
                 </h3>
-                <div class="menu-item-price">18₽</div>
-                <div class="menu-item-description">
-                  Свежие овощи с грузинскими специями
-                </div>
-                <div class="menu-item-description, gram">250гр</div>
+
+                <div class="menu-item-description, gram">250гр(5бр.)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Основные блюда-->
+        <div class="menu-content" id="main">
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="./Хингали/1.png"
+                alt="Салат"
+                height="280"
+                width="100%"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Хингали с брынзой
+                </h3>
+                <div class="menu-item-price">6лв/3.07eur</div>
+                <div class="menu-item-description, gram">1 бр.</div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="./Хингали/2.png"
+                alt="Салат"
+                height="280"
+                width="100%"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Хингали с телятиной
+                </h3>
+                <div class="menu-item-price">4.60лв/2.35eur</div>
+
+                <div class="menu-item-description, gram">1 бр.</div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="./Хингали/3.png"
+                alt="Салат"
+                height="280"
+                width="100%"
+              />
+              <div class="menu-item-content">
+                <h3 data-i18n="menu.salads.items.georgian.name">
+                  Мама хингали
+                </h3>
+
+                <div class="menu-item-description, gram">250гр(5бр.)</div>
               </div>
             </div>
           </div>
