@@ -432,6 +432,10 @@ body {
   border: 1px solid #f0f0f0;
 }
 
+.menu-item-2 {
+  max-width: 360px;
+}
+
 .menu-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
@@ -835,7 +839,8 @@ body {
   color: #666;
   font-weight: 300;
 }
-
+@media (min-width: 460px) {
+}
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .header-container {
