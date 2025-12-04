@@ -431,7 +431,12 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid #f0f0f0;
 }
-
+.item-1 {
+  max-height: 158px;
+}
+.item-2 {
+  max-width: 400px;
+}
 .menu-item-2 {
   max-width: 360px;
 }
