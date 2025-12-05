@@ -199,9 +199,9 @@ const translations = {
       about_text:
         "Ресторан аутентичной грузинской кухни, где традиции встречаются с современностью.",
       quick_links: "Быстрые ссылки",
-      about_link: "О нас",
-      menu_link: "Меню",
-      reservation_link: "Бронирование",
+      about: "О нас",
+      menu: "Меню",
+      reservation: "Бронирование",
       follow: "Следите за нами",
       follow_text: "Подпишитесь на наши социальные сети для акций и новостей.",
       copyright: "© 2024 Hayat Restaurant. Все права защищены.",
@@ -406,9 +406,9 @@ const translations = {
       about_text:
         "Restaurant of authentic Georgian cuisine where traditions meet modernity.",
       quick_links: "Quick Links",
-      about_link: "About Us",
-      menu_link: "Menu",
-      reservation_link: "Reservation",
+      about: "About Us",
+      menu: "Menu",
+      reservation: "Reservation",
       follow: "Follow Us",
       follow_text: "Subscribe to our social networks for promotions and news.",
       copyright: "© 2024 Hayat Restaurant. All rights reserved.",
@@ -612,9 +612,9 @@ const translations = {
       about_text:
         "Ресторант на автентична грузинска кухня, където традициите срещат модерността.",
       quick_links: "Бързи връзки",
-      about_link: "За нас",
-      menu_link: "Меню",
-      reservation_link: "Резервация",
+      about: "За нас",
+      menu: "Меню",
+      reservation: "Резервация",
       follow: "Последвайте ни",
       follow_text:
         "Абонирайте се за нашите социални мрежи за промоции и новини.",
@@ -731,6 +731,8 @@ function initializeMobileMenu() {
     menuToggle.addEventListener("click", function () {
       this.classList.toggle("active");
       nav.classList.toggle("active");
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
     });
   }
 
@@ -741,8 +743,32 @@ function initializeMobileMenu() {
       if (window.innerWidth <= 768) {
         menuToggle.classList.remove("active");
         nav.classList.remove("active");
+        document.body.style.overflow = "";
       }
     });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", function (event) {
+    if (window.innerWidth <= 768) {
+      const isClickInsideNav = nav.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains("active")) {
+        menuToggle.classList.remove("active");
+        nav.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+  });
+
+  // Close mobile menu with Escape key
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && nav.classList.contains("active")) {
+      menuToggle.classList.remove("active");
+      nav.classList.remove("active");
+      document.body.style.overflow = "";
+    }
   });
 }
 
