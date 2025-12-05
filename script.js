@@ -625,6 +625,7 @@ const translations = {
 
 // ===== INITIALIZATION =====
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM Content Loaded - Initializing functions");
   initializeLanguage();
   initializeMenu();
   initializeBarMenu();
@@ -727,13 +728,47 @@ function initializeMobileMenu() {
   const menuToggle = document.getElementById("menuToggle");
   const nav = document.getElementById("nav");
 
+  console.log("Mobile menu initialization");
+  console.log("Menu toggle element:", menuToggle);
+  console.log("Nav element:", nav);
+
   if (menuToggle && nav) {
-    menuToggle.addEventListener("click", function () {
-      this.classList.toggle("active");
-      nav.classList.toggle("active");
-      // Prevent body scroll when menu is open
-      document.body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
+    // Handle both click and touch events for mobile
+    menuToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("Menu toggle clicked!");
+      console.log("Window width:", window.innerWidth);
+      
+      // Simple toggle without complex animations
+      const isActive = nav.classList.contains("active");
+      
+      if (isActive) {
+        nav.classList.remove("active");
+        this.classList.remove("active");
+        document.body.style.overflow = "";
+        console.log("Menu closed");
+      } else {
+        nav.classList.add("active");
+        this.classList.add("active");
+        document.body.style.overflow = "hidden";
+        console.log("Menu opened");
+      }
     });
+
+    // Add touch event for mobile devices
+    menuToggle.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("Menu toggle touched!");
+      
+      // Trigger click event
+      this.click();
+    });
+  } else {
+    console.error("Menu elements not found!");
+    console.log("Looking for menuToggle:", document.getElementById("menuToggle"));
+    console.log("Looking for nav:", document.getElementById("nav"));
   }
 
   // Close mobile menu when clicking on a link
