@@ -458,54 +458,6 @@ body {
 .salats {
   height: 300px;
 }
-/* ===== BAR MENU SECTION - BLACK & WHITE ===== */
-.bar-menu {
-  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-  color: #1a1a1a;
-}
-
-.bar-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.bar-item {
-  background: white;
-  border-radius: 0;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e8e8e8;
-}
-
-.bar-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.bar-item h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
-  font-weight: 500;
-}
-
-.bar-item-price {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #dc2626;
-  margin-bottom: 0.5rem;
-}
-
-.bar-item-description {
-  font-size: 0.85rem;
-  color: #666;
-  font-weight: 300;
-  line-height: 1.4;
-}
-
 /* ===== RESERVATION SECTION - BLACK & WHITE ===== */
 .reservation {
   background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
@@ -596,7 +548,11 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(220, 38, 38, 0.9);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   transition: left 0.5s ease;
 }
 
