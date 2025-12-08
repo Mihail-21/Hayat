@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM Content Loaded - Initializing functions");
   initializeLanguage();
   initializeMenu();
-  initializeBarMenu();
   initializeMobileMenu();
   initializeSmoothScroll();
   initializeHeaderScroll();
@@ -34,634 +33,6 @@ function initializeLanguage() {
 function changeLanguage(lang) {
   currentLanguage = lang;
 
-  // Update document title
-  document.title = {
-    ru: {
-      title: "Ресторан Hayat - Грузинская кухня",
-      nav: {
-        home: "Главная",
-        about: "О нас",
-        menu: "Меню",
-        bar: "Бар",
-        reservation: "Бронирование",
-        reviews: "Отзывы",
-        contact: "Контакты",
-      },
-      hero: {
-        title: "Добро пожаловать в Hayat",
-        subtitle: "Аутентичная грузинская кухня в сердце города",
-        cta: "Забронировать столик",
-      },
-      about: {
-        title: "О ресторане",
-        description:
-          "Ресторан Hayat - это место, где традиции грузинской гостеприимства встречаются с современными кулинарными стандартами. Мы предлагаем вам увлекательное путешествие в мир богатых вкусов и ароматов Грузии, где каждое блюдо рассказывает свою уникальную историю.",
-        description2:
-          "Наш шеф-повар с многолетним опытом воссоздает классические рецепты, используя только лучшие ингредиенты и секретные техники приготовления. От сочных шашлыков до нежных хачапури - каждый ужин у нас становится незабываемым событием.",
-      },
-      menu: {
-        title: "Наше меню",
-        appetizers: "Закуски",
-        salads: "Салаты",
-        khachapuri: "Хачапури",
-        khinkali: "Хинкали",
-        main: "Основные блюда",
-        grill: "Гриль",
-        soups: "Супы",
-        garnishes: "Гарниры",
-        sauces: "Соусы",
-        breads: "Хлебы",
-        appetizers: {
-          items: {
-            pkhali: {
-              name: "Пхали",
-              description:
-                "Традиционная закуска из шпината с грецкими орехами и специями",
-            },
-            chakhokhbili: {
-              name: "Чахохбили",
-              description: "Тушеная курица с томатами и зеленью",
-            },
-            badrijani: {
-              name: "Бадриджани",
-              description: "Баклажаны с ореховой пастой и гранатом",
-            },
-          },
-        },
-        salads: {
-          items: {
-            georgian: {
-              name: "Грузинский салат",
-              description: "Свежие овощи с грузинскими специями",
-            },
-          },
-        },
-      },
-      bar: {
-        title: "Барное меню",
-        wines: "Вина",
-        cocktails: "Коктейли",
-        spirits: "Крепкие напитки",
-        soft: "Безалкогольные",
-        wines: {
-          items: {
-            saperavi: {
-              name: "Саперави",
-              description: "Красное сухое вино из Кахети",
-            },
-            kindzmarauli: {
-              name: "Киндзмараули",
-              description: "Полусладкое красное вино",
-            },
-            tsinandali: {
-              name: "Цинандали",
-              description: "Белое сухое вино с фруктовыми нотками",
-            },
-            rkatsiteli: {
-              name: "Ркацители",
-              description: "Традиционное белое вино Грузии",
-            },
-          },
-        },
-        cocktails: {
-          items: {
-            chacha_mojito: {
-              name: "Чача Мохито",
-              description: "Грузинская чача с мятой и лаймом",
-            },
-            tbilisi_sunrise: {
-              name: "Рассвет Тбилиси",
-              description: "Экзотический коктейль с гранатовым соком",
-            },
-            georgian_mule: {
-              name: "Грузинский мул",
-              description: "Чача с имбирем и грузинскими специями",
-            },
-          },
-        },
-        spirits: {
-          items: {
-            chacha: {
-              name: "Чача",
-              description: "Грузинская виноградная водка",
-            },
-            aragi: {
-              name: "Араги",
-              description: "Традиционный грузинский самогон",
-            },
-          },
-        },
-        soft: {
-          items: {
-            natakhari: {
-              name: "Натахтари",
-              description: "Натуральный лимонад из Грузии",
-            },
-            borjomi: {
-              name: "Боржоми",
-              description: "Легендарная минеральная вода",
-            },
-            uzo: {
-              name: "Узо",
-              description: "Традиционный грузинский напиток из тархуна",
-            },
-          },
-        },
-      },
-      reservation: {
-        title: "Бронирование столика",
-        name: "Имя",
-        phone: "Телефон",
-        date: "Дата",
-        time: "Время",
-        guests: "Количество гостей",
-        occasion: "Повод",
-        occasion_default: "Выберите повод",
-        birthday: "День рождения",
-        anniversary: "Годовщина",
-        business: "Деловая встреча",
-        date_night: "Свидание",
-        family: "Семейный ужин",
-        friends: "Встреча с друзьями",
-        notes: "Особые пожелания",
-        submit: "Забронировать",
-      },
-      reviews: {
-        title: "Отзывы наших гостей",
-        reviews1: {
-          name: "Александр Петров",
-          date: "15 ноября 2024",
-          text: "Потрясающий ресторан! Атмосфера настоящей Грузии, блюда просто восхитительные. Особенно понравились хинкали и шашлык. Обязательно вернемся снова!",
-        },
-        reviews2: {
-          name: "Мария Иванова",
-          date: "10 ноября 2024",
-          text: "Идеальное место для семейных ужинов. Дети тоже остались в восторге от блюд. Отличное обслуживание, красивый интерьер. Рекомендую!",
-        },
-        reviews3: {
-          name: "Дмитрий Смирнов",
-          date: "5 ноября 2024",
-          text: "Отличная грузинская кухня! Хачапури просто обалденные, вино тоже на высоте. Единственное - иногда нужно ждать заказ дольше, чем хотелось бы.",
-        },
-        reviews4: {
-          name: "Елена Козлова",
-          date: "1 ноября 2024",
-          text: "Праздновали здесь день рождения - было просто великолепно! Персонал очень attentive, помогли с выбором блюд. Все гости остались довольны.",
-        },
-        reviews5: {
-          name: "Антон Волков",
-          date: "28 октября 2024",
-          text: "Аутентичная грузинская атмосфера! Музыка живая, блюда вкусные, порции щедрые. Чача - отдельная история! Настоящее погружение в Грузию.",
-        },
-        reviews6: {
-          name: "Ольга Новикова",
-          date: "25 октября 2024",
-          text: "Очень хорошее место для романтического ужина. Красивая атмосфера, вкусная еда. Немного шумно по выходным, но это добавляет жизни ресторану.",
-        },
-      },
-      contact: {
-        title: "Контакты",
-        address_title: "Адрес",
-        address: "ул. Тверская, 15, Москва",
-        phone_title: "Телефон",
-        phone: "+7 (495) 123-45-67",
-        email_title: "Email",
-        email: "info@hayat-restaurant.ru",
-        hours_title: "Часы работы",
-        hours: "Пн-Вс: 12:00 - 23:00",
-      },
-      footer: {
-        about: "О Hayat",
-        about_text:
-          "Ресторан аутентичной грузинской кухни, где традиции встречаются с современностью.",
-        quick_links: "Быстрые ссылки",
-        about: "О нас",
-        menu: "Меню",
-        reservation: "Бронирование",
-        follow: "Следите за нами",
-        follow_text:
-          "Подпишитесь на наши социальные сети для акций и новостей.",
-        copyright: "© 2024 Hayat Restaurant. Все права защищены.",
-      },
-    },
-    en: {
-      title: "Hayat Restaurant - Georgian Cuisine",
-      nav: {
-        home: "Home",
-        about: "About",
-        menu: "Menu",
-        bar: "Bar",
-        reservation: "Reservation",
-        reviews: "Reviews",
-        contact: "Contact",
-      },
-      hero: {
-        title: "Welcome to Hayat",
-        subtitle: "Authentic Georgian cuisine in the heart of the city",
-        cta: "Book a Table",
-      },
-      about: {
-        title: "About Restaurant",
-        description:
-          "The history of Hayat Restaurant Hayat Restaurant opened in Varna in 2023 with the desire to create a place where everyone could experience the taste of the real Caucasus and the warmth of home cooking. We grew up surrounded by the aromas of fresh lavash, smoky shashliks and feasts where family and friends gathered around one table. And one day we decided to bring this atmosphere here, to the heart of Varna — to a restaurant where everything is simple, honest and homely.",
-        description2:
-          "Our chef with many years of experience recreates classic recipes using only the best ingredients and secret cooking techniques. From juicy kebabs to tender khachapuri - every dinner with us becomes an unforgettable event.",
-      },
-      menu: {
-        title: "Our Menu",
-        appetizers: "Appetizers",
-        salads: "Salads",
-        khachapuri: "Khachapuri",
-        khinkali: "Khinkali",
-        main: "Main Dishes",
-        grill: "Grill",
-        soups: "Soups",
-        garnishes: "Garnishes",
-        sauces: "Sauces",
-        breads: "Breads",
-        appetizers: {
-          items: {
-            pkhali: {
-              name: "Pkhali",
-              description:
-                "Traditional spinach appetizer with walnuts and spices",
-            },
-            chakhokhbili: {
-              name: "Chakhokhbili",
-              description: "Stewed chicken with tomatoes and herbs",
-            },
-            badrijani: {
-              name: "Badrijani",
-              description: "Eggplants with nut paste and pomegranate",
-            },
-          },
-        },
-        salads: {
-          items: {
-            georgian: {
-              name: "Georgian Salad",
-              description: "Fresh vegetables with Georgian spices",
-            },
-          },
-        },
-      },
-      bar: {
-        title: "Bar Menu",
-        wines: "Wines",
-        cocktails: "Cocktails",
-        spirits: "Spirits",
-        soft: "Soft Drinks",
-        wines: {
-          items: {
-            saperavi: {
-              name: "Saperavi",
-              description: "Dry red wine from Kakheti",
-            },
-            kindzmarauli: {
-              name: "Kindzmarauli",
-              description: "Semi-sweet red wine",
-            },
-            tsinandali: {
-              name: "Tsinandali",
-              description: "Dry white wine with fruity notes",
-            },
-            rkatsiteli: {
-              name: "Rkatsiteli",
-              description: "Traditional Georgian white wine",
-            },
-          },
-        },
-        cocktails: {
-          items: {
-            chacha_mojito: {
-              name: "Chacha Mojito",
-              description: "Georgian chacha with mint and lime",
-            },
-            tbilisi_sunrise: {
-              name: "Tbilisi Sunrise",
-              description: "Exotic cocktail with pomegranate juice",
-            },
-            georgian_mule: {
-              name: "Georgian Mule",
-              description: "Chacha with ginger and Georgian spices",
-            },
-          },
-        },
-        spirits: {
-          items: {
-            chacha: {
-              name: "Chacha",
-              description: "Georgian grape vodka",
-            },
-            aragi: {
-              name: "Aragi",
-              description: "Traditional Georgian moonshine",
-            },
-          },
-        },
-        soft: {
-          items: {
-            natakhari: {
-              name: "Natakhari",
-              description: "Natural lemonade from Georgia",
-            },
-            borjomi: {
-              name: "Borjomi",
-              description: "Legendary mineral water",
-            },
-            uzo: {
-              name: "Uzo",
-              description: "Traditional Georgian tarragon drink",
-            },
-          },
-        },
-      },
-      reservation: {
-        title: "Table Reservation",
-        name: "Name",
-        phone: "Phone",
-        date: "Date",
-        time: "Time",
-        guests: "Number of Guests",
-        occasion: "Occasion",
-        occasion_default: "Select Occasion",
-        birthday: "Birthday",
-        anniversary: "Anniversary",
-        business: "Business Meeting",
-        date_night: "Date Night",
-        family: "Family Dinner",
-        friends: "Friends Gathering",
-        notes: "Special Requests",
-        submit: "Reserve",
-      },
-      reviews: {
-        title: "Guest Reviews",
-        reviews1: {
-          name: "Alexander Petrov",
-          date: "November 15, 2024",
-          text: "Amazing restaurant! Real Georgian atmosphere, dishes are just delicious. Especially liked khinkali and kebabs. We will definitely come back again!",
-        },
-        reviews2: {
-          name: "Maria Ivanova",
-          date: "November 10, 2024",
-          text: "Perfect place for family dinners. The children were also delighted with the dishes. Excellent service, beautiful interior. I recommend!",
-        },
-        reviews3: {
-          name: "Dmitry Smirnov",
-          date: "November 5, 2024",
-          text: "Great Georgian cuisine! Khachapuri are just amazing, wine is also top-notch. The only thing - sometimes you have to wait for an order longer than you'd like.",
-        },
-        reviews4: {
-          name: "Elena Kozlova",
-          date: "November 1, 2024",
-          text: "We celebrated a birthday here - it was just magnificent! The staff is very attentive, helped with choosing dishes. All guests were satisfied.",
-        },
-        reviews5: {
-          name: "Anton Volkov",
-          date: "October 28, 2024",
-          text: "Authentic Georgian atmosphere! Live music, tasty food, generous portions. Chacha is a separate story! A real immersion into Georgia.",
-        },
-        reviews6: {
-          name: "Olga Novikova",
-          date: "October 25, 2024",
-          text: "Very good place for a romantic dinner. Beautiful atmosphere, tasty food. A bit noisy on weekends, but it adds life to the restaurant.",
-        },
-      },
-      contact: {
-        title: "Contact",
-        address_title: "Address",
-        address: "Tverskaya Street, 15, Moscow",
-        phone_title: "Phone",
-        phone: "+7 (495) 123-45-67",
-        email_title: "Email",
-        email: "info@hayat-restaurant.ru",
-        hours_title: "Working Hours",
-        hours: "Mon-Sun: 12:00 - 23:00",
-      },
-      footer: {
-        about: "About Hayat",
-        about_text:
-          "Restaurant of authentic Georgian cuisine where traditions meet modernity.",
-        quick_links: "Quick Links",
-        about: "About Us",
-        menu: "Menu",
-        reservation: "Reservation",
-        follow: "Follow Us",
-        follow_text:
-          "Subscribe to our social networks for promotions and news.",
-        copyright: "© 2024 Hayat Restaurant. All rights reserved.",
-      },
-    },
-    bg: {
-      title: "Ресторант Hayat - Грузинска кухня",
-      nav: {
-        home: "Начало",
-        about: "За нас",
-        menu: "Меню",
-        bar: "Бар",
-        reservation: "Резервация",
-        reviews: "Ревюта",
-        contact: "Контакт",
-      },
-      hero: {
-        title: "Добре дошли в Hayat",
-        subtitle: "Автентична грузинска кухня в сърцето на града",
-        cta: "Резервирайте маса",
-      },
-      about: {
-        title: "За ресторанта",
-        description:
-          "Ресторант Hayat е място, където традициите на грузинското гостоприемство срещват модерните кулинарни стандарти. Предлагаме ви завладяващо пътешествие в света на богатите вкусове и аромати на Грузия, където всяко ястие разказва своя уникална история.",
-        description2:
-          "Нашият готвач с многогодишен опит воссъздава класически рецепти, използвайки само най-добрите съставки и тайни техники за готвене. От сочни кебапи до нежни хачапури - всяка вечеря при нас става незабравимо събитие.",
-      },
-      menu: {
-        title: "Нашето меню",
-        appetizers: "Предястия",
-        salads: "Салати",
-        khachapuri: "Хачапури",
-        khinkali: "Хинкали",
-        main: "Основни ястия",
-        grill: "Грил",
-        soups: "Супи",
-        garnishes: "Гарнитури",
-        sauces: "Сосове",
-        breads: "Хлябове",
-        appetizers: {
-          items: {
-            pkhali: {
-              name: "Пхали",
-              description:
-                "Традиционно предястие от спанак с орехи и подправки",
-            },
-            chakhokhbili: {
-              name: "Чахохбили",
-              description: "Задушено пиле с домати и подправки",
-            },
-            badrijani: {
-              name: "Бадрижани",
-              description: "Патладжани с орехова паста и нар",
-            },
-          },
-        },
-        salads: {
-          items: {
-            georgian: {
-              name: "Грузинска салата",
-              description: "Пресни зеленчуци с грузински подправки",
-            },
-          },
-        },
-      },
-      bar: {
-        title: "Бар меню",
-        wines: "Вина",
-        cocktails: "Коктейли",
-        spirits: "Алкохол",
-        soft: "Безалкохолни",
-        wines: {
-          items: {
-            saperavi: {
-              name: "Саперави",
-              description: "Сухо червено вино от Какети",
-            },
-            kindzmarauli: {
-              name: "Киндзмараули",
-              description: "Полусладко червено вино",
-            },
-            tsinandali: {
-              name: "Цинандали",
-              description: "Сухо бяло вино с плодови нотки",
-            },
-            rkatsiteli: {
-              name: "Ркацители",
-              description: "Традиционно грузинско бяло вино",
-            },
-          },
-        },
-        cocktails: {
-          items: {
-            chacha_mojito: {
-              name: "Чача Мохито",
-              description: "Грузинска чача с мента и лайм",
-            },
-            tbilisi_sunrise: {
-              name: "Залез в Тбилиси",
-              description: "Екзотичен коктейл с нар сок",
-            },
-            georgian_mule: {
-              name: "Грузински мул",
-              description: "Чача с джинджифил и грузински подправки",
-            },
-          },
-        },
-        spirits: {
-          items: {
-            chacha: {
-              name: "Чача",
-              description: "Грузинска гроздова водка",
-            },
-            aragi: {
-              name: "Араги",
-              description: "Традиционна грузинска ракия",
-            },
-          },
-        },
-        soft: {
-          items: {
-            natakhari: {
-              name: "Натахтари",
-              description: "Природен лимонад от Грузия",
-            },
-            borjomi: {
-              name: "Боржоми",
-              description: "Легендарна минерална вода",
-            },
-            uzo: {
-              name: "Узо",
-              description: "Традиционна грузинска напитка от тархун",
-            },
-          },
-        },
-      },
-      reservation: {
-        title: "Резервация на маса",
-        name: "Име",
-        phone: "Телефон",
-        date: "Дата",
-        time: "Час",
-        guests: "Брой гости",
-        occasion: "Повод",
-        occasion_default: "Изберете повод",
-        birthday: "Рожден ден",
-        anniversary: "Годишнина",
-        business: "Бизнес среща",
-        date_night: "Свидание",
-        family: "Семейна вечеря",
-        friends: "Сбирка с приятели",
-        notes: "Специални пожелания",
-        submit: "Резервирай",
-      },
-      reviews: {
-        title: "Ревюта на гости",
-        reviews1: {
-          name: "Александър Петров",
-          date: "15 ноември 2024",
-          text: "Невероятен ресторант! Реална грузинска атмосфера, ястията са просто вкусни. Особено харесах хинкали и кебапи. Непременно ще се върнем отново!",
-        },
-        reviews2: {
-          name: "Мария Иванова",
-          date: "10 ноември 2024",
-          text: "Перфектно място за семейни вечери. Децата също бяха очаровани от ястията. Отлично обслужване, красив интериор. Препоръчвам!",
-        },
-        reviews3: {
-          name: "Дмитрий Смирнов",
-          date: "5 ноември 2024",
-          text: "Отлична грузинска кухня! Хачапурите са просто невероятни, виното също е на високо ниво. Единственото - понякога трябва да се чака поръчката по-дълго от желаното.",
-        },
-        reviews4: {
-          name: "Елена Козлова",
-          date: "1 ноември 2024",
-          text: "Отбелязахме рожден ден тук - беше просто великолепно! Персоналът е много внимателен, помогна с избора на ястия. Всички гости бяха доволни.",
-        },
-        reviews5: {
-          name: "Антон Волков",
-          date: "28 октомври 2024",
-          text: "Автентична грузинска атмосфера! Жива музика, вкусна храна, щедри порции. Чачата е отделна история! Реално потапяне в Грузия.",
-        },
-        reviews6: {
-          name: "Олга Новикова",
-          date: "25 октомври 2024",
-          text: "Много добро място за романтична вечеря. Красива атмосфера, вкусна храна. Малко шумно през уикендите, но това добавя живот на ресторанта.",
-        },
-      },
-      contact: {
-        title: "Контакт",
-        address_title: "Адрес",
-        address: "ул. Тверская, 15, Москва",
-        phone_title: "Телефон",
-        phone: "+7 (495) 123-45-67",
-        email_title: "Email",
-        email: "info@hayat-restaurant.ru",
-        hours_title: "Работно време",
-        hours: "Пн-Нд: 12:00 - 23:00",
-      },
-      footer: {
-        about: "За Hayat",
-        about_text:
-          "Ресторант на автентична грузинска кухня, където традициите срещат модерността.",
-        quick_links: "Бързи връзки",
-        about: "За нас",
-        menu: "Меню",
-        reservation: "Резервация",
-        follow: "Последвайте ни",
-        follow_text:
-          "Абонирайте се за нашите социални мрежи за промоции и новини.",
-        copyright: "© 2024 Hayat Restaurant. Всички права запазени.",
-      },
-    },
-  }[lang].title;
-
   // Update all elements with data-i18n attribute
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((element) => {
@@ -687,13 +58,14 @@ function changeLanguage(lang) {
           about: {
             title: "О ресторане",
             description:
-              "Ресторан Hayat - это место, где традиции грузинской гостеприимства встречаются с современными кулинарными стандартами. Мы предлагаем вам увлекательное путешествие в мир богатых вкусов и ароматов Грузии, где каждое блюдо рассказывает свою уникальную историю.",
+              "История ресторана «Хаят» Ресторан «Хаят» появился в Варне в 2023 году — из желания создать место, где каждый сможет почувствовать вкус настоящего Кавказа и тепло домашнего угощения. Мы выросли среди ароматов свежего лаваша, дымных шашлыков и застолий, где за одним столом собирались родные и друзья. И однажды решили передать эту атмосферу здесь, в сердце Варны — в ресторане, где всё просто, честно и по-домашнему.",
             description2:
-              "Наш шеф-повар с многолетним опытом воссоздает классические рецепты, используя только лучшие ингредиенты и секретные техники приготовления. От сочных шашлыков до нежных хачапури - каждый ужин у нас становится незабываемым событием.",
+              "Кухня «Хаят» объединяет армянские и грузинские традиции. Мы готовим с душой — так, как готовят для своих: без спешки, с уважением к рецептам и с любовью к гостям. Каждое блюдо здесь — история. Вкус детства, семейных праздников и вечеров, когда еда объединяет людей. «Хаят» — это не просто ресторан. Это место, куда заходят не случайно. Здесь пахнет тёплым хлебом и специями, звучит смех, а за каждым столом чувствуется уют и душа Кавказа. Добро пожаловать домой — в «Хаят».",
           },
           menu: {
             title: "Наше меню",
             appetizers: "Закуски",
+            hotappetizers: "Гарячие закуски",
             salads: "Салаты",
             khachapuri: "Хачапури",
             khinkali: "Хинкали",
@@ -703,100 +75,91 @@ function changeLanguage(lang) {
             garnishes: "Гарниры",
             sauces: "Соусы",
             breads: "Хлебы",
-            appetizers: {
-              items: {
-                pkhali: {
-                  name: "Пхали",
-                  description:
-                    "Традиционная закуска из шпината с грецкими орехами и специями",
-                },
-                chakhokhbili: {
-                  name: "Чахохбили",
-                  description: "Тушеная курица с томатами и зеленью",
-                },
-                badrijani: {
-                  name: "Бадриджани",
-                  description: "Баклажаны с ореховой пастой и гранатом",
-                },
+          },
+          appetizers: {
+            items: {
+              cheese: {
+                name: "Армянсие сиры с зеленью",
+                description:
+                  "Традиционная закуска из бринзы, сулугуни и шпината",
               },
-            },
-            salads: {
-              items: {
-                georgian: {
-                  name: "Грузинский салат",
-                  description: "Свежие овощи с грузинскими специями",
-                },
+              heriing: {
+                name: "Седёдка под водку",
+                description: "Селёдка, варенный картофель, лук маренованный",
+              },
+              pkhali: {
+                name: "Пхали батладжани",
+                description:
+                  "Баклажаны с ореховой пастой, гранатом, и на салатном листе",
+              },
+              pkhali2: {
+                name: "Баклажаны с помидорами",
+                description:
+                  "Баклажаны с чесночным соусом и свежими помидорами",
+              },
+              vegetables: {
+                name: "Овощи по-армянски",
+                description:
+                  "Маринованные овощи по-армянски, в состав входт: Огурцы, помидоры, капуста",
+              },
+              basturma: {
+                name: "Бастурма",
+                description:
+                  "Традиционная закуска из бринзы, сулугуни и шпината",
+              },
+              sujuk: {
+                name: "Суджук",
+                description:
+                  "Домашний суджук, приготовленный по армянскому рецепту",
               },
             },
           },
-          bar: {
-            title: "Барное меню",
-            wines: "Вина",
-            cocktails: "Коктейли",
-            spirits: "Крепкие напитки",
-            soft: "Безалкогольные",
-            wines: {
-              items: {
-                saperavi: {
-                  name: "Саперави",
-                  description: "Красное сухое вино из Кахети",
-                },
-                kindzmarauli: {
-                  name: "Киндзмараули",
-                  description: "Полусладкое красное вино",
-                },
-                tsinandali: {
-                  name: "Цинандали",
-                  description: "Белое сухое вино с фруктовыми нотками",
-                },
-                rkatsiteli: {
-                  name: "Ркацители",
-                  description: "Традиционное белое вино Грузии",
-                },
+          hotappetizers: {
+            items: {
+              lavash: {
+                name: "Лаваш с травами, брынзой и сыром, приготовленный на огне",
+              },
+              pepper: {
+                name: "Перец, запечённый с брынзой или с сыром",
+                description: "Печённый перец с домешней брынзой",
               },
             },
-            cocktails: {
-              items: {
-                chacha_mojito: {
-                  name: "Чача Мохито",
-                  description: "Грузинская чача с мятой и лаймом",
-                },
-                tbilisi_sunrise: {
-                  name: "Рассвет Тбилиси",
-                  description: "Экзотический коктейль с гранатовым соком",
-                },
-                georgian_mule: {
-                  name: "Грузинский мул",
-                  description: "Чача с имбирем и грузинскими специями",
-                },
+          },
+          salads: {
+            items: {
+              khorovats: {
+                name: "Хоровац",
+                description:
+                  "Традиционный армянский салат из печёных на мангале овощей,заправляется маслом",
               },
-            },
-            spirits: {
-              items: {
-                chacha: {
-                  name: "Чача",
-                  description: "Грузинская виноградная водка",
-                },
-                aragi: {
-                  name: "Араги",
-                  description: "Традиционный грузинский самогон",
-                },
+              Shopska: {
+                name: "Шопский салат",
+                description:
+                  "Свежий помидор, огурец, печёный перец, маринованный лук и сырфета, заправленные растительным маслом",
               },
-            },
-            soft: {
-              items: {
-                natakhari: {
-                  name: "Натахтари",
-                  description: "Натуральный лимонад из Грузии",
-                },
-                borjomi: {
-                  name: "Боржоми",
-                  description: "Легендарная минеральная вода",
-                },
-                uzo: {
-                  name: "Узо",
-                  description: "Традиционный грузинский напиток из тархуна",
-                },
+              green: {
+                name: "",
+                description: "",
+              },
+              caesar: {
+                name: "",
+                description: "",
+              },
+              armenian: {
+                name: "",
+                description: "",
+              },
+              tabbouleh: {
+                name: "",
+                description: "",
+              },
+              crispy: {
+                name: "",
+                description: "",
+              },
+              khayat: {
+                name: "",
+                description: "",
               },
             },
           },
@@ -897,11 +260,12 @@ function changeLanguage(lang) {
             description:
               "Hayat Restaurant is a place where Georgian hospitality traditions meet modern culinary standards. We offer you a fascinating journey into the world of rich flavors and aromas of Georgia, where each dish tells its unique story.",
             description2:
-              "Our chef with many years of experience recreates classic recipes using only the best ingredients and secret cooking techniques. From juicy kebabs to tender khachapuri - every dinner with us becomes an unforgettable event.",
+              "Hayat cuisine combines Armenian and Georgian traditions. We cook with soul — just as we would cook for our own families: without rushing, with respect for recipes and love for our guests. Every dish here has a story behind it. The taste of childhood, family celebrations and evenings when food brings people together. Hayat is not just a restaurant. It is a place where people come for a reason. It smells of warm bread and spices, sounds of laughter fill the air, and every table exudes the cosiness and soul of the Caucasus. Welcome home — to Hayat.",
           },
           menu: {
             title: "Our Menu",
             appetizers: "Appetizers",
+            hotappetizers: "Hot appetizers",
             salads: "Salads",
             khachapuri: "Khachapuri",
             khinkali: "Khinkali",
@@ -911,100 +275,59 @@ function changeLanguage(lang) {
             garnishes: "Garnishes",
             sauces: "Sauces",
             breads: "Breads",
-            appetizers: {
-              items: {
-                pkhali: {
-                  name: "Pkhali",
-                  description:
-                    "Traditional spinach appetizer with walnuts and spices",
-                },
-                chakhokhbili: {
-                  name: "Chakhokhbili",
-                  description: "Stewed chicken with tomatoes and herbs",
-                },
-                badrijani: {
-                  name: "Badrijani",
-                  description: "Eggplants with nut paste and pomegranate",
-                },
+          },
+          appetizers: {
+            items: {
+              cheese: {
+                name: "Armenian cheese with greens",
+                description:
+                  "A traditional appetiser made with brynza, suluguni and spinach.",
               },
-            },
-            salads: {
-              items: {
-                georgian: {
-                  name: "Georgian Salad",
-                  description: "Fresh vegetables with Georgian spices",
-                },
+              heriing: {
+                name: "Herring with vodka",
+                description: "Herring, boiled potatoes, pickled onions",
+              },
+              pkhali: {
+                name: "Pkhali batladzani",
+                description: "Aubergines with garlic sauce and fresh tomatoes",
+              },
+              pkhali2: {
+                name: "Aubergines with tomatoes",
+                description: "Aubergines with garlic sauce and fresh tomatoes",
+              },
+              vegetables: {
+                name: "Armenian-style vegetables",
+                description:
+                  "Armenian-style pickled vegetables, including cucumbers, tomatoes and cabbage",
+              },
+              basturma: {
+                name: "Basturma",
+                description:
+                  "Traditional appetiser made from brynza cheese, suluguni cheese and spinach",
+              },
+              sujuk: {
+                name: "Sujuk",
+                description:
+                  "Homemade sujuk prepared according to an Armenian recipe",
               },
             },
           },
-          bar: {
-            title: "Bar Menu",
-            wines: "Wines",
-            cocktails: "Cocktails",
-            spirits: "Spirits",
-            soft: "Soft Drinks",
-            wines: {
-              items: {
-                saperavi: {
-                  name: "Saperavi",
-                  description: "Dry red wine from Kakheti",
-                },
-                kindzmarauli: {
-                  name: "Kindzmarauli",
-                  description: "Semi-sweet red wine",
-                },
-                tsinandali: {
-                  name: "Tsinandali",
-                  description: "Dry white wine with fruity notes",
-                },
-                rkatsiteli: {
-                  name: "Rkatsiteli",
-                  description: "Traditional Georgian white wine",
-                },
+          hotappetizers: {
+            items: {
+              lavash: {
+                name: "Lavash with herbs, brynza and cheese, cooked over a fire",
+              },
+              pepper: {
+                name: "Peppers baked with brynza or cheese",
+                description: "Baked peppers with homemade brynza",
               },
             },
-            cocktails: {
-              items: {
-                chacha_mojito: {
-                  name: "Chacha Mojito",
-                  description: "Georgian chacha with mint and lime",
-                },
-                tbilisi_sunrise: {
-                  name: "Tbilisi Sunrise",
-                  description: "Exotic cocktail with pomegranate juice",
-                },
-                georgian_mule: {
-                  name: "Georgian Mule",
-                  description: "Chacha with ginger and Georgian spices",
-                },
-              },
-            },
-            spirits: {
-              items: {
-                chacha: {
-                  name: "Chacha",
-                  description: "Georgian grape vodka",
-                },
-                aragi: {
-                  name: "Aragi",
-                  description: "Traditional Georgian moonshine",
-                },
-              },
-            },
-            soft: {
-              items: {
-                natakhari: {
-                  name: "Natakhari",
-                  description: "Natural lemonade from Georgia",
-                },
-                borjomi: {
-                  name: "Borjomi",
-                  description: "Legendary mineral water",
-                },
-                uzo: {
-                  name: "Uzo",
-                  description: "Traditional Georgian tarragon drink",
-                },
+          },
+          salads: {
+            items: {
+              georgian: {
+                name: "Грузинска салата",
+                description: "Пресни зеленчуци с грузински подправки",
               },
             },
           },
@@ -1103,9 +426,9 @@ function changeLanguage(lang) {
           about: {
             title: "За ресторанта",
             description:
-              "Ресторант Hayat е място, където традициите на грузинското гостоприемство срещват модерните кулинарни стандарти. Предлагаме ви завладяващо пътешествие в света на богатите вкусове и аромати на Грузия, където всяко ястие разказва своя уникална история.",
+              "Ресторант „Хаят“ отвори врати във Варна през 2023 г., роден от желанието да създадем място, където всеки може да се докосне до истинския Кавказ и топлината на домашно приготвената храна. Израснахме, заобиколени от ароматите на пресен лаваш, опушен шишчета и празненства, където семейството и приятелите се събираха около масата. И един ден решихме да уловим тази атмосфера тук, в сърцето на Варна, в ресторант, където всичко е просто, искрено и домашно.",
             description2:
-              "Нашият готвач с многогодишен опит воссъздава класически рецепти, използвайки само най-добрите съставки и тайни техники за готвене. От сочни кебапи до нежни хачапури - всяка вечеря при нас става незабравимо събитие.",
+              "Кухнята на Хаят съчетава арменски и грузински традиции. Готвим с душа, както готвим за себе си: без бързане, с уважение към рецептите и с любов към нашите гости. Всяко ястие тук разказва история. Това е вкус от детството, семейните тържества и вечерите, когато храната събира хората. Хаят е повече от просто ресторант. Това е място, където хората не идват случайно. Ухае на топъл хляб и подправки, отекват смеховете, а на всяка маса можете да усетите уюта и душата на Кавказ. Добре дошли у дома – в Хаят.",
           },
           menu: {
             title: "Нашето меню",
@@ -1119,100 +442,58 @@ function changeLanguage(lang) {
             garnishes: "Гарнитури",
             sauces: "Сосове",
             breads: "Хлябове",
-            appetizers: {
-              items: {
-                pkhali: {
-                  name: "Пхали",
-                  description:
-                    "Традиционно предястие от спанак с орехи и подправки",
-                },
-                chakhokhbili: {
-                  name: "Чахохбили",
-                  description: "Задушено пиле с домати и подправки",
-                },
-                badrijani: {
-                  name: "Бадрижани",
-                  description: "Патладжани с орехова паста и нар",
-                },
+          },
+          appetizers: {
+            items: {
+              cheese: {
+                name: "Арменско сирене с билки",
+                description:
+                  "Традиционно предястие, приготвено с бринза, сулугуни и спанак",
               },
-            },
-            salads: {
-              items: {
-                georgian: {
-                  name: "Грузинска салата",
-                  description: "Пресни зеленчуци с грузински подправки",
-                },
+              heriing: {
+                name: "Херинга с водка",
+                description: "Херинга, варени картофи, маринован лук",
+              },
+              pkhali: {
+                name: "Пхали батладжани",
+                description: "Патладжан с чеснов сос и пресни домати",
+              },
+              pkhali2: {
+                name: "Патладжани с домати",
+                description: "Патладжан с чеснов сос и пресни домати",
+              },
+              vegetables: {
+                name: "Арменски зеленчуци",
+                description:
+                  "Мариновани зеленчуци по арменски, включително: краставици, домати, зеле",
+              },
+              basturma: {
+                name: "Бастурма",
+                description:
+                  "Традиционно предястие, приготвено с бринза, сулугуни и спанак",
+              },
+              sujuk: {
+                name: "Суджук",
+                description: "Домашен суджук, приготвен по арменска рецепта",
               },
             },
           },
-          bar: {
-            title: "Бар меню",
-            wines: "Вина",
-            cocktails: "Коктейли",
-            spirits: "Алкохол",
-            soft: "Безалкохолни",
-            wines: {
-              items: {
-                saperavi: {
-                  name: "Саперави",
-                  description: "Сухо червено вино от Какети",
-                },
-                kindzmarauli: {
-                  name: "Киндзмараули",
-                  description: "Полусладко червено вино",
-                },
-                tsinandali: {
-                  name: "Цинандали",
-                  description: "Сухо бяло вино с плодови нотки",
-                },
-                rkatsiteli: {
-                  name: "Ркацители",
-                  description: "Традиционно грузинско бяло вино",
-                },
+          hotappetizers: {
+            items: {
+              lavash: {
+                name: "Лаваш, печен на огън, с билки, сирене фета и сирене",
+              },
+              pepper: {
+                name: "Печени чушки със сирене фета или сирене",
+                description: "Печени чушки с домашно приготвено сирене фета",
               },
             },
-            cocktails: {
-              items: {
-                chacha_mojito: {
-                  name: "Чача Мохито",
-                  description: "Грузинска чача с мента и лайм",
-                },
-                tbilisi_sunrise: {
-                  name: "Залез в Тбилиси",
-                  description: "Екзотичен коктейл с нар сок",
-                },
-                georgian_mule: {
-                  name: "Грузински мул",
-                  description: "Чача с джинджифил и грузински подправки",
-                },
-              },
-            },
-            spirits: {
-              items: {
-                chacha: {
-                  name: "Чача",
-                  description: "Грузинска гроздова водка",
-                },
-                aragi: {
-                  name: "Араги",
-                  description: "Традиционна грузинска ракия",
-                },
-              },
-            },
-            soft: {
-              items: {
-                natakhari: {
-                  name: "Натахтари",
-                  description: "Природен лимонад от Грузия",
-                },
-                borjomi: {
-                  name: "Боржоми",
-                  description: "Легендарна минерална вода",
-                },
-                uzo: {
-                  name: "Узо",
-                  description: "Традиционна грузинска напитка от тархун",
-                },
+          },
+          salads: {
+            items: {
+              georgian: {
+                name: "Грузинска салата",
+                description: "Пресни зеленчуци с грузински подправки",
               },
             },
           },
@@ -1332,27 +613,6 @@ function updateFormPlaceholders(lang) {
   }
 }
 
-// ===== MENU FUNCTIONALITY =====
-function initializeMenu() {
-  const menuTabs = document.querySelectorAll(".menu-tab[data-category]");
-  const menuContents = document.querySelectorAll(".menu-content");
-
-  menuTabs.forEach((tab) => {
-    tab.addEventListener("click", function () {
-      const category = this.dataset.category;
-
-      menuTabs.forEach((t) => t.classList.remove("active"));
-      menuContents.forEach((c) => c.classList.remove("active"));
-
-      this.classList.add("active");
-      const targetContent = document.getElementById(category);
-      if (targetContent) {
-        targetContent.classList.add("active");
-      }
-    });
-  });
-}
-
 // ===== SMOOTH SCROLL =====
 function initializeSmoothScroll() {
   const links = document.querySelectorAll('a[href^="#"]');
@@ -1376,7 +636,26 @@ function initializeSmoothScroll() {
     });
   });
 }
+// ===== MENU FUNCTIONALITY =====
+function initializeMenu() {
+  const menuTabs = document.querySelectorAll(".menu-tab[data-category]");
+  const menuContents = document.querySelectorAll(".menu-content");
 
+  menuTabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      const category = this.dataset.category;
+
+      menuTabs.forEach((t) => t.classList.remove("active"));
+      menuContents.forEach((c) => c.classList.remove("active"));
+
+      this.classList.add("active");
+      const targetContent = document.getElementById(category);
+      if (targetContent) {
+        targetContent.classList.add("active");
+      }
+    });
+  });
+}
 // ===== HEADER SCROLL EFFECT =====
 function initializeHeaderScroll() {
   const header = document.querySelector(".header");

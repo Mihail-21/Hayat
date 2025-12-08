@@ -48,7 +48,6 @@
           <button class="lang-btn" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="bg">BG</button>
         </div>
-      </div>
     </header>
 
     <!-- ===== HERO SECTION ===== -->
@@ -103,33 +102,85 @@
         <h2 class="section-title" data-i18n="menu.title">Наше меню</h2>
 
         <div class="menu-tabs">
-          <button class="menu-tab active" data-category="appetizers">
+          <button
+            class="menu-tab active"
+            data-category="appetizers"
+            data-i18n="menu.appetizers"
+          >
             Холодные закуски
           </button>
-          <button class="menu-tab" data-category="hot-appetizers">
+          <button
+            class="menu-tab"
+            data-category="hotappetizers"
+            data-i18n="menu.hotappetizers"
+          >
             Гарячие закуски
           </button>
-          <button class="menu-tab" data-category="salads">Салаты</button>
-          <button class="menu-tab" data-category="khachapuri">Хачапури</button>
-          <button class="menu-tab" data-category="khinkali">Хинкали</button>
-          <button class="menu-tab" data-category="main">Основные блюда</button>
-          <button class="menu-tab" data-category="grill">Гриль</button>
-          <button class="menu-tab" data-category="new">Новинки</button>
-          <button class="menu-tab" data-category="soups">Супы</button>
-          <button class="menu-tab" data-category="garnishes">Гарниры</button>
-          <button class="menu-tab" data-category="sauces">Соусы</button>
-          <button class="menu-tab" data-category="breads">Хлебы</button>
+          <button
+            class="menu-tab"
+            data-category="salads"
+            data-i18n="menu.salads"
+          >
+            Салаты
+          </button>
+          <button
+            class="menu-tab"
+            data-category="khachapuri"
+            data-i18n="menu.khachapuri"
+          >
+            Хачапури
+          </button>
+          <button
+            class="menu-tab"
+            data-category="khinkali"
+            data-i18n="menu.khinkali"
+          >
+            Хинкали
+          </button>
+          <button class="menu-tab" data-category="main" data-i18n="menu.main">
+            Основные блюда
+          </button>
+          <button class="menu-tab" data-category="grill" data-i18n="menu.grill">
+            Гриль
+          </button>
+          <button class="menu-tab" data-category="new" data-i18n="menu.new">
+            Новинки
+          </button>
+          <button class="menu-tab" data-category="soups" data-i18n="menu.soups">
+            Супы
+          </button>
+          <button
+            class="menu-tab"
+            data-category="garnishes"
+            data-i18n="menu.garnishes"
+          >
+            Гарниры
+          </button>
+          <button
+            class="menu-tab"
+            data-category="sauces"
+            data-i18n="menu.sauces"
+          >
+            Соусы
+          </button>
+          <button
+            class="menu-tab"
+            data-category="breads"
+            data-i18n="menu.breads"
+          >
+            Хлебы
+          </button>
         </div>
 
         <!-- Закуски -->
         <div class="menu-content active" id="appetizers">
           <div class="menu-grid">
             <div class="menu-item">
-              <img src="./закуски/1.jpeg" alt="Пхали" class="menu-item-image" />
+              <img src="./закуски/1.jpeg" alt="сиры" class="menu-item-image" />
               <div class="menu-item-content">
-                <h3>Армянсие сиры с зеленью</h3>
+                <h3 data-i18n="appetizers.items.cheese.name">Армянсие сиры с зеленью</h3>
                 <div class="menu-item-price">17.99лв/9.20eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description" data-i18n="appetizers.items.cheese.description">
                   Традиционная закуска из бринзы, сулугуни и шпината
                 </div>
                 <div class="menu-item-description, gram">200гр</div>
@@ -142,9 +193,9 @@
                 class="menu-item-image"
               />
               <div class="menu-item-content">
-                <h3>Седёдка под водку</h3>
+                <h3 data-i18n="appetizers.items.heriing.name">Седёдка под водку</h3>
                 <div class="menu-item-price">15.99лв/8.17eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description" data-i18n="appetizers.items.heriing.description">
                   Селёдка, варенный картофель, лук маренованный
                 </div>
                 <div class="menu-item-description, gram">200гр</div>
@@ -153,36 +204,36 @@
             <div class="menu-item">
               <img
                 src="./закуски/3.png"
-                alt="Бадриджани"
+                alt="Баклажаны пхали"
                 class="menu-item-image"
               />
               <div class="menu-item-content">
-                <h3>Пхали батладжани</h3>
+                <h3 data-i18n="appetizers.items.pkhali.name">Пхали батладжани</h3>
 
                 <div class="menu-item-price">13.99лв/7.15eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description" data-i18n="appetizers.items.pkhali.description">
                   Баклажаны с ореховой пастой, гранатом, и на салатном листе
                 </div>
                 <div class="menu-item-description, gram">200гр</div>
               </div>
             </div>
             <div class="menu-item">
-              <img src="./закуски/7.png" alt="Пхали" class="menu-item-image" />
+              <img src="./закуски/7.png" alt="Баклажаны с помидорами" class="menu-item-image" />
               <div class="menu-item-content">
-                <h3>Баклажаны с помидорами</h3>
+                <h3 data-i18n="appetizers.items.pkhali2.name">Баклажаны с помидорами</h3>
                 <div class="menu-item-price">11.99лв/6.13eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description"  data-i18n="appetizers.items.pkhali2.description">
                   Баклажаны с чесночным соусом и свежими помидорами
                 </div>
                 <div class="menu-item-description, gram">200гр</div>
               </div>
             </div>
             <div class="menu-item">
-              <img src="./закуски/4.jpg" alt="Пхали" class="menu-item-image" />
+              <img src="./закуски/4.jpg" alt="овощи" class="menu-item-image" />
               <div class="menu-item-content">
-                <h3>Овощи по-армянски</h3>
+                <h3 data-i18n="appetizers.items.vegetables.name">Овощи по-армянски</h3>
                 <div class="menu-item-price">14.99лв/7/.66eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description"   data-i18n="appetizers.items.vegetables.description">
                   Маринованные овощи по-армянски, в состав входт:"Огурцы,
                   помидоры, капуста"
                 </div>
@@ -190,11 +241,11 @@
               </div>
             </div>
             <div class="menu-item">
-              <img src="./закуски/9.jpg" alt="Пхали" class="menu-item-image" />
+              <img src="./закуски/9.jpg" alt="Бастурма" class="menu-item-image" />
               <div class="menu-item-content">
-                <h3>Бастурма</h3>
+                <h3 data-i18n="appetizers.items.basturma.name">Бастурма</h3>
                 <div class="menu-item-price">10.99лв/5.62eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description" data-i18n="appetizers.items.basturma.description">
                   Традиционная закуска из бринзы, сулугуни и шпината
                 </div>
                 <div class="menu-item-description, gram">50гр</div>
@@ -207,9 +258,9 @@
                 class="menu-item-image"
               />
               <div class="menu-item-content">
-                <h3>Суджук</h3>
+                <h3 data-i18n="appetizers.items.sujuk.name">Суджук</h3>
                 <div class="menu-item-price">7.99лв/4.10eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description"data-i18n="appetizers.items.sujuk.description" >
                   Домашний суджук, приготовленный по армянскому рецепту
                 </div>
                 <div class="menu-item-description, gram">50гр</div>
@@ -218,7 +269,7 @@
           </div>
         </div>
         <!--Гарячие закуски-->
-        <div class="menu-content" id="hot-appetizers">
+        <div class="menu-content" id="hotappetizers">
           <div class="menu-grid">
             <div class="menu-item item-2">
               <img
@@ -228,7 +279,7 @@
                 width="100%"
               />
               <div class="menu-item-content">
-                <h3>
+                <h3 data-i18n="hotappetizers.items.lavash.name">
                   Лаваш с травами, брынзой и сыром, приготовленный на огне
                 </h3>
                 <div class="menu-item-price">12.99лв/6.64eur</div>
@@ -243,9 +294,9 @@
                 width="100%"
               />
               <div class="menu-item-content">
-                <h3>Перец, запечённый с брынзой или с сыром</h3>
+                <h3 data-i18n="hotappetizers.items.pepper.name">Перец, запечённый с брынзой или с сыром</h3>
                 <div class="menu-item-price">14.99лв/7.70eur</div>
-                <div class="menu-item-description">
+                <div class="menu-item-description" data-i18n="hotappetizers.items.pepper.description">
                   Печённый перец с домешней брынзой
                 </div>
                 <div class="menu-item-description, gram">250гр</div>
@@ -259,11 +310,11 @@
             <div class="menu-item">
               <img src="./салаты/1.png" alt="Салат" class="menu-item-image" />
               <div class="menu-item-content">
-                <h3>Хоровац</h3>
+                <h3 data-i18n="salads.items.khorovats.name">Хоровац</h3>
                 <div class="menu-item-price">14.99лв/7.66eur</div>
                 <div class="menu-item-description">
                   Традиционный армянский салат из печёных на мангале
-                  овощей,заправляется маслом.
+                  овощей,заправляется маслом
                 </div>
                 <div class="menu-item-description, gram">300гр</div>
               </div>
