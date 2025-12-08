@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM Content Loaded - Initializing functions");
   initializeLanguage();
   initializeMenu();
-  initializeMobileMenu();
   initializeSmoothScroll();
   initializeHeaderScroll();
   initializeReservationForm();
