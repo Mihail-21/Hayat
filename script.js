@@ -160,7 +160,7 @@ function changeLanguage(lang) {
                 description:
                   "Обжаренные баклажаны с овощами и ароматным соусом",
               },
-              hayat: {
+              Hayat: {
                 name: "Тёплый салат: Хаят с телячьей вырезкой и баклажанами",
                 description:
                   "Сочный тёплый салат с нежной телятиной, баклажанами и овощами",
@@ -169,6 +169,43 @@ function changeLanguage(lang) {
                 name: "Грузинский салат",
                 description:
                   "Свежий салат с огурцами, помидорами и орехами с настоящим духом Грузии!",
+              },
+            },
+          },
+          khachapuri: {
+            items: {
+              imeretian: {
+                name: "Хачапури по-имеретински",
+                description: "Закрытое хачапури с двумя видами сыра",
+              },
+              adjarian: {
+                name: "Хачапури по-аджарски",
+                description:
+                  "Закрытое хачапури с двумя видами сыра в форме лодки",
+              },
+              imeretian: {
+                name: "Хачапури по-еревански",
+                description: "Хачапури с мясом, украшенное свежими овощами",
+              },
+              yerevan: {
+                name: "Хачапури Намак",
+                description:
+                  "Авторское прочтение классики Кавказа. Нежное куринное мясо и сочная телятина в тонком тесте с тянущимся сыром, создают насыщенный вкус, в котором гармония лёгкости и силы. Намак - это новое сочетание традиций и современности, рожденное для тех, кто ищет особенный вкус.",
+              },
+              lobiani: {
+                name: "Хачапури лобиани с лобио",
+                description:
+                  "Пышный хачапури с традиционной фасолевой начинкой",
+              },
+              mingrelian: {
+                name: "Хачапури по-мегрельски",
+                description:
+                  "Сытный хачапури с двойным сыром - внутри и сверху",
+              },
+              grilled: {
+                name: "Хачапури на мангале",
+                description:
+                  "Ароматный хачапури, приготовленный на углях с лёгким дымком",
               },
             },
           },
@@ -368,7 +405,7 @@ function changeLanguage(lang) {
                 description:
                   "Fried eggplant with vegetables and a flavorful sauce",
               },
-              hayat: {
+              Hayat: {
                 name: "Warm salad: khayat with veal tenderloin and eggplant",
                 description:
                   "A juicy warm salad with tender veal, eggplant, and vegetables",
@@ -573,7 +610,7 @@ function changeLanguage(lang) {
                 name: "Салата с хрупкав патладжан",
                 description: "Пържен патладжан със зеленчуци и ароматен сос",
               },
-              hayat: {
+              Hayat: {
                 name: "Топла салата: Хаят с телешко филе и патладжан",
                 description:
                   "Сочна топла салата с крехко телешко месо, патладжан и зеленчуци",
@@ -585,6 +622,7 @@ function changeLanguage(lang) {
               },
             },
           },
+
           reservation: {
             title: "Резервация на маса",
             name: "Име",
